@@ -114,38 +114,33 @@ void checker(Passwd passwds[], int *count, Node **head) {
     int strength = 0;
 
     if (has_min_length(pw)) {
-        printf("Length OK\n");
         strength++;
     } else {
         printf("Too short\n");
     }
 
     if (has_uppercase(pw)) {
-        printf("Has uppercase\n");
         strength++;
     } else {
-        printf("No uppercase\n");
+        printf("Add uppercase\n");
     }
 
     if (has_lowercase(pw)) {
-        printf("Has lowercase\n");
         strength++;
     } else {
-        printf("No lowercase\n");
+        printf("Add lowercase\n");
     }
 
     if (has_digit(pw)) {
-        printf("Has digit\n");
         strength++;
     } else {
-        printf("No digit\n");
+        printf("Add digit\n");
     }
 
     if (has_special_char(pw)) {
-        printf("Has special character\n");
         strength++;
     } else {
-        printf("No special character\n");
+        printf("Add special character\n");
     }
 
     if (strength >= 5) {
