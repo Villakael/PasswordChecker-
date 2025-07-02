@@ -1,24 +1,32 @@
-# Password Strength Checker (C Language)
+# Password Strength Checker in C
 
-A simple terminal-based program in C that checks the strength of user-entered passwords. Strong passwords are stored in memory and saved to a `passwords.txt` file so they persist across runs.
+This project is a terminal-based password evaluation and storage system implemented in the C programming language. It provides functionality to analyze user-supplied passwords based on predefined strength metrics, and stores those that meet security criteria in both memory and a persistent text file.
+
+## Overview
+
+The core purpose of this project is to demonstrate foundational programming techniques in C, including:
+
+- Input validation and safe handling of user input
+- Use of custom data structures (arrays and linked lists)
+- Dynamic memory allocation
+- File I/O for persistent storage
+- Basic password strength analysis algorithms
+
+Passwords that meet strong security requirements are stored in memory using a singly linked list and are also appended to a `passwords.txt` file for long-term storage across program executions.
 
 ## Features
 
-- Password strength checks:
-  - Minimum length (8+ characters)
-  - At least one uppercase letter
-  - At least one lowercase letter
-  - At least one digit
-  - At least one special character
-- Saves strong passwords to a local `passwords.txt` file
-- Stores passwords in memory using a linked list
-- Handles invalid menu input gracefully
-
-## How to Run
-
-1. Make sure you have a C compiler installed (like `gcc`, `clang`, or an IDE like Code::Blocks).
-2. Compile the code using your preferred method.
-3. Run the compiled executable.
+- Evaluates passwords based on five key criteria:
+  - Minimum length of 8 characters
+  - Contains at least one uppercase letter
+  - Contains at least one lowercase letter
+  - Contains at least one numerical digit
+  - Contains at least one special character from a defined set
+- Categorizes password strength into five levels: very weak, weak, moderate, fair, and strong
+- Accepts input interactively from the user via a menu-based interface
+- Validates input to prevent crashes or unexpected behavior from invalid entries
+- Stores strong passwords in a file (`passwords.txt`)
+- Uses dynamic memory (linked list) to store session data for efficient password listing
 
 ## Example Test Passwords
 
